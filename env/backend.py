@@ -7,9 +7,9 @@ app = Flask(__name__)
 @app.route('/',methods=['POST'])
 def baseAPI():
    data=request.data
-   URL = "https://dev-sms.bongolive.africa/api/v1/send"
-   user = "abb40ca70b0d4726"
-   passw = "MmM5MThiYTNiOGJiZjhhOTk3NzFiNmE5MzBlMjk2NWQ5Njk1MjIzZmViZmU2YWEyZjZjMDM2ODk3YWY2M2E2OQ=="
+   URL = "https://apisms.bongolive.africa/v1/send"
+   user = "<USER_NAME>"
+   passw = "<USER_PASSWORD>"
    requests.post(url=URL,data=data,auth=(user,passw),verify=False)
    return Response(
         json.dumps(request.data),
